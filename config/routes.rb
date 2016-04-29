@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :subcategoria
+
   resources :nichos
 
   resources :categoria
