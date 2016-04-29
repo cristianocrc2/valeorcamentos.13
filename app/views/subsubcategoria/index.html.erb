@@ -1,0 +1,29 @@
+<h1>Listing subsubcategoria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Frequencia</th>
+      <th>Ativo</th>
+      <th>Subcategoria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subsubcategoria.each do |subsubcategorium| %>
+      <tr>
+        <td><%= subsubcategorium.frequencia %></td>
+        <td><%= subsubcategorium.ativo %></td>
+        <td><%= subsubcategorium.subcategoria %></td>
+        <td><%= link_to 'Show', subsubcategorium %></td>
+        <td><%= link_to 'Edit', edit_subsubcategorium_path(subsubcategorium) %></td>
+        <td><%= link_to 'Destroy', subsubcategorium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subsubcategorium', new_subsubcategorium_path %>
